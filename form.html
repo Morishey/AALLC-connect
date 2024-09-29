@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Agency LLC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h4 style="font-family: 'Montserrat';">Residential Rental Application</h4>
+        </nav>
+    </header>
+
+    <hr>
+
+    <div class="container2">
+
+        <form id="form1" action="">
+
+            <label class="topLabel0" for="propType">Property type</label>
+            <input id="propType" name="propType" placeholder="Apartment, Home, Condo ?" type="text">
+
+            <label class="topLabel0" for="size">Size in square feet</label>
+            <input type="number" id="size" placeholder="square feet (SF)">
+
+            <label class="topLabel0" for="bedrooms">Bedrooms</label>
+            <input id="bedrooms" placeholder="number of rooms " type="number">
+
+            <label class="topLabel0" for="rentAmount">Rent amount per month</label>
+            <input id="rentAmount" type="number" placeholder="$">
+
+            <label class="topLabel0" for="address">Address</label>
+            <input id="address" type="text" placeholder="street address">
+            <input id="city" type="text" placeholder="City">
+            <input id="state" type="text" placeholder="State">
+            <input id="zip" type="number" placeholder="zip">
+            <!-- YES NO -->
+            <div class="yesNo">
+                <div class="option">
+                    <label class="topLabel" for="pets">Pets?</label>
+                    <label class="optionButton">
+                        <input class="obtn" type="radio" name="pets" value="yes">
+                        <span>Yes</span>
+                    </label>
+                    <label class="optionButton">
+                        <input class="obtn" type="radio" name="pets" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="option">
+                    <label class="topLabel" for="smoking">Smoking?</label>
+                    <label class="optionButton">
+                        <input type="radio" name="smoking" value="yes">
+                        <span>Yes</span>
+                    </label>
+                    <label class="optionButton">
+                        <input type="radio" name="smoking" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+                <div class="option">
+                    <label class="topLabel" for="parking">Parking?</label>
+                    <label class="optionButton">
+                        <input type="radio" name="parking" value="yes">
+                        <span>Yes</span>
+                    </label>
+                    <label class="optionButton">
+                        <input type="radio" name="parking" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="textArea">
+                <label for="ifYes">(PARKING?) If yes describe the Parking leave blank if otherwise</label>
+                <textarea id="ifYes" name="propertType" placeholder="describe the Parking"> </textarea>
+            </div>
+
+            <div class="tenancy">
+                <div class="shortInput">
+                    <label for="tenancyType">TENANCY (Type/Length)</label>
+                    <input type="text" id="tenancyType">
+                </div>
+
+                <div class="shortInput">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate">
+                </div>
+
+            </div>
+
+
+
+            <div class="next">
+                <button id="form1Next" class="nextBtn" type="button" >NEXT</button>
+            </div>
+
+        </form>
+
+        <!--FORM TWO -->
+
+        <form id="form2" action="" style="font-weight: bold; font-family: 'Raleway'; color: white;">
+            <p id="applicantDetails" style="text-align: center; margin-bottom: 10px;">APPLICANT DETAILS</p>
+
+            <div class="form2top">
+                <label for="fullname">FULL NAME</label>
+                <input id="fullname" name="fullname" placeholder="Firstname Lastname" type="text" required>
+            </div>
+
+            <div class="tenancy2">
+                <div class="shortInput">
+                    <label for="ssn">SSN</label>
+                    <input type="number" id="ssn" required>
+                </div>
+
+                <div class="shortInput">
+                    <label for="dob">Date of Birth</label>
+                    <input class="mobile" type="date" id="dob" required>
+                </div>
+
+            </div>
+
+            <div class="form2top">
+                <label for="email">Email</label>
+                <input id="email" name="email" placeholder="example@email.com" type="email" required>
+            </div>
+
+
+            <div class="tenancy2">
+                <div class="shortInput">
+                    <label for="dl">Driver's License Number</label>
+                    <input type="number" id="dl" required>
+                </div>
+
+                <div class="shortInput">
+                    <label for="phone">phone</label>
+                    <input type="num" id="phone" required>
+                </div>
+            </div>
+
+            <div class="yesNo">
+                <div class="option">
+                    <label for="others">Other Occupants?</label>
+                    <label class="optionButton">
+                        <input type="radio" name="others" value="yes">
+                        <span>Yes</span>
+                    </label>
+                    <label class="optionButton">
+                        <input type="radio" name="others" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="textArea">
+                <label for="descOthers">Other Occupants if Yes? Describe</label>
+                <textarea id="descOthers" name="descOthers"></textarea>
+            </div>
+
+            <div class="yesNo">
+                <div class="option">
+                    <label for="occuPets?">Pets?</label>
+                    <label class="optionButton">
+                        <input type="radio" name="occuPets?" value="yes">
+                        <span>Yes</span>
+                    </label>
+                    <label class="optionButton">
+                        <input type="radio" name="occuPets?" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="textArea">
+                <label for="petsDesc">Pets? if Yes, Describe</label>
+                <textarea id="petsDesc" name="petDesc"></textarea>
+            </div>
+
+            <div class="yesNo">
+                <div class="option">
+                    <label for="car">Vehicle?</label>
+                    <label class="optionButton">
+                        <input type="radio" name="car" value="yes">
+                        <span>Yes</span>
+                    </label>
+                    <label class="optionButton">
+                        <input type="radio" name="car" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="textArea">
+                <label for="carDesc">Vehicle? if Yes, Describe</label>
+                <textarea id="carDesc" name="carDesc"></textarea>
+            </div>
+
+            <div class="yesNo">
+                <div class="option">
+                    <label for="evicted">Ever been evicted?</label>
+                    <label class="optionButton">
+                        <input type="radio" name="evicted" value="yes">
+                        <span>Yes</span>
+                    </label>
+                    <label class="optionButton">
+                        <input type="radio" name="evicted" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="textArea">
+                <label for="evictDesc">Ever been evicted? if Yes, Describe</label>
+                <textarea id="evictDesc" name="evictDesc"></textarea>
+            </div>
+            <div class="next2">
+                <img id="back2form1" src="./img/back-arrow.png" alt="back" style="width: 50px;">
+                <button id="form2Next" type="button" class="nextBtn">NEXT</button>
+            </div>
+
+        </form>
+
+        <!--form 3 -->
+        <form id="form3" action="" style=" font-weight: bold; font-family: 'Raleway'; color: silver;">
+            <p id="currentEmployment" style="text-align: center; margin: 10px;">CURRENT EMPLOYMENT</p>
+
+            <div class="form2top">
+                <label for="company">Company</label>
+                <input id="company" name="company" placeholder="your current employer" type="text" required>
+            </div>
+
+
+                      <div class="tenancy2">
+                <div class="shortInput">
+                    <label for="occuTitle">Occupation/Title</label>
+                    <input type="text" name="occuTitle" id="occuTitle" required>
+                </div>
+
+                <div class="shortInput startdate">
+                    <label for="grossIncome">Gross Income($)</label>
+                    <input type="number" id="grossIncome" name="grossIncome" placeholder="prior year Tax filing"
+                        required>
+                </div>
+
+            </div>
+
+            <div class="form2top">
+                <label for="employerAddress">Employer Address</label>
+                <input id="employerAddress" type="text" placeholder="street address">
+                <input id="employerCity" type="text" placeholder="City">
+                <input id="employerState" type="text" placeholder="State">
+                <input id="employerVip" type="number" placeholder="zip">
+
+                <label for="email">Email</label>
+                <input id="email" name="email" placeholder="example@email.com" type="email" required>
+            </div>
+
+            <div class="tenancy2">
+                <div class="shortInput">
+                    <label for="addDuration">How long at this address?</label>
+                    <input type="text" id="addDuration" name="addDuration" required>
+                </div>
+
+                <div class="shortInput">
+                    <label for="leaseExp">Current Lease expiration Date</label>
+                    <input type="date" id="leaseExp" name="leaseExp" recquired>
+                </div>
+            </div>
+
+            <div class="form2top">
+                <label for="reason">Desire for Moving?</label>
+                <input id="reason" name="reason" type="text">
+            </div>
+
+            <p id="currentEmployment" style="text-align: center;">CURRENT LANDLORD</p>
+
+            <div class="form2top">
+                <label for="landlordName">Name</label>
+                <input id="landlordName" name="landlordName" type="text">
+
+                <label for="landlordAdd">Address</label>
+                <input id="landlordAdd" name="landlordAdd" type="text">
+            </div>
+
+            <p id="reference" style="text-align: center;">PERSONAL REFERENCE</p>
+
+            <div class="form2top">
+                <label for="referenceName">Name</label>
+                <input id="referenceName" name="referenceName" type="text" required>
+
+                <label for="referenceAdd">Address</label>
+                <input id="referenceAdd" name="referenceAdd" type="text" required>
+
+                <label for="referenceEmail">Email</label>
+                <input id="referenceEmail" name="referenceEmail" type="text" required>
+            </div>
+
+            <div class="lastInput">
+                <label for="referencePhone">Phone</label>
+                <input type="number" id="referencePhone" name="referencePhone" required>
+            </div>
+
+            <div class="control">
+                <button type="submit" onclick="window.location.href='./payment.html'">Submit</button>
+            </div>
+
+            <div class="next3">
+                <img id="back2form2" src="./img/back-arrow.png" alt="back" style="width: 50px;">
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+
+    <footer style="font-family: 'Montserrat';">
+        Alpha Agency LLC 2024
+    </footer>
+    <script src="./app.js"></script>
+</body>
+
+</html>

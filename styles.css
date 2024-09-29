@@ -1,0 +1,694 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url(./fonts/OpenSans-VariableFont_wdth\wght.ttf) format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url(./fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(./fonts/Raleway-VariableFont_wght.ttf) format("truetype");
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.container2 {
+  text-align: center;
+  height: auto;
+  width: 70%;
+  /* border: 1px solid red; */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* border: 1px solid white; */
+  width: 100%;
+  height: auto;
+  color: rgb(249, 255, 252);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+nav {
+  color: white;
+  width: 1200px;
+  font-size: large;
+  padding: 20px;
+}
+
+nav p {
+  color: white; /* Text color */
+  margin: 0; /* Remove default margin */
+  /* font-family: "OpenSans"; */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+hr {
+  border: none;
+  width: 100%;
+  height: 1px; /* Adjust thickness */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  margin: 10px 0;
+}
+
+body {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: teal;
+}
+
+.topLabel0 {
+  /* border: 1px solid white; */
+  padding-left: 70px;
+  display: flex;
+  width: 80%;
+  font-size: 15px;
+  text-align: center;
+  color: #ffffff;
+  margin: 10px;
+  font-weight: bold;
+  font-family: "Montserrat";
+}
+
+.textArea label {
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat";
+  margin: 10px;
+}
+
+#form2 label,
+#form3 label {
+  margin: 10px;
+  color: white;
+}
+
+.shortInput label {
+  color: white;
+  font-weight: bold;
+  font-family: "Montserrat";
+  margin: 10px;
+}
+
+input {
+  font-size: 16px;
+  padding: 10px;
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 15px;
+  margin-bottom: 9px;
+  background-color: aliceblue;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(16, 68, 64, 0.616);
+  outline: none;
+}
+
+.lastInput {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid white; */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.lastInput input {
+  width: 50%;
+}
+
+input::placeholder {
+  color: gray;
+  font-size: 16px;
+  opacity: 0.4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.yesNo {
+  display: flex;
+  flex-direction: column; /* Stack the options vertically */
+  align-items: center; /* Align options to the start */
+  /* border: 1px solid white; */
+}
+
+.option {
+  margin-bottom: 10px; /* Space between options */
+  /* border: 1px solid red; */
+  width: 73%;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.optionButton {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px;
+  margin-top: 5px; /* Space between the label and buttons */
+  background-color: silver; /* Default button background color */
+  color: white; /* Default text color */
+  border-radius: 15px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+/* Hide the actual radio button */
+.optionButton input[type="radio"] {
+  display: none;
+}
+
+.optionButton input[type="radio"]:checked + span {
+  color: rgb(10, 96, 82); /* Change the text color to green when selected */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.optionButton input[type="radio"]:checked {
+  background-color: rgb(10, 96, 82);
+  color: rgb(10, 96, 82); /* Ensure the text inside the button is green */
+}
+
+.optionButton:hover {
+  background-color: rgb(10, 96, 82); /* Slightly darker background on hover */
+}
+
+form {
+  margin-top: 20px;
+  display: none;
+}
+form.active {
+  display: block; /* Show the active form */
+}
+
+#form1 {
+  display: block;
+  /* border: 1px solid white; */
+  justify-content: center;
+  align-items: center;
+}
+
+.form2top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid white; */
+  align-items: center;
+  margin-top: 10px;
+}
+
+#form2,
+#form3 {
+  display: none;
+}
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  resize: none;
+}
+
+textarea {
+  /* border: 1px solid white; */
+  width: 600px;
+  height: 80px;
+  resize: none;
+  border-radius: 15px;
+  background-color: aliceblue;
+  padding: 15px;
+}
+
+.tenancy {
+  margin-top: -20px;
+  width: 100%;
+  /* border: 1px solid #ffffff; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* gap: 30px; */
+  margin-bottom: 20px;
+}
+
+.tenancy2 {
+  margin-top: 10px;
+  /* border: 1px solid #ffffff; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.shortInput {
+  width: 35%;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.startdate {
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+}
+
+#reference,
+#currentEmployment {
+  color: white;
+  margin-top: 10px;
+}
+
+.control {
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: space-evenly;
+}
+.next2 {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  vertical-align: middle;
+  justify-content: space-evenly;
+}
+
+.next3 {
+  /* border: 1px solid white; */
+  width: 100%;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control button {
+  padding: 15px;
+  font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 5px;
+  background-color: rgb(10, 96, 82);
+  color: whitesmoke;
+  border: none;
+  text-shadow: 6px 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.next button {
+  width: 100px;
+  padding: 10px;
+  /* margin-right: 70px; */
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 5px;
+  background-color: rgb(10, 96, 82);
+  color: whitesmoke;
+  border: none;
+  text-shadow: 6px 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.next2 button {
+  width: 100px;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 5px;
+  background-color: rgb(10, 96, 82);
+  color: whitesmoke;
+  border: none;
+  text-shadow: 6px 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.zoom-out {
+  animation: zoomOut 2s ease forwards;
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  animation: pulse 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: scaleUp 1s linear infinite;
+}
+
+.loaderDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Takes full viewport height */
+  width: 100vw; /* Takes full viewport width */
+  position: fixed; /* Ensures it stays in the center */
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.pay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid silver;
+  text-align: center;
+  width: 75%;
+  height: 300px;
+  border-radius: 20px;
+  margin-top: 30px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.pay p {
+  margin-top: 20px;
+}
+
+.rowPay {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer {
+  color: rgba(0, 0, 0, 0.311);
+  font-size: 15px;
+  background-color: rgba(192, 192, 192, 0.559);
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 1px;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  60%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes pulse {
+  0%,
+  60%,
+  100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  @font-face {
+    font-family: "Montserrat";
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "OpenSans";
+    src: url(./fonts/OpenSans-VariableFont_wdth\wght.ttf) format("truetype");
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "PlayfairDisplay";
+    src: url(./fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Raleway";
+    src: url(./fonts/Raleway-VariableFont_wght.ttf) format("truetype");
+    font-style: normal;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html body {
+    overflow-x: hidden;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Montserrat";
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: teal;
+  }
+
+  .container2 {
+    height: auto;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #form1,
+  #form2,
+  #form3 {
+    /* border: 2px solid white; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: "Montserrat";
+    /* color: black; */
+  }
+
+  .optionButton {
+    width: 95%;
+  }
+
+  .textArea {
+    width: 100%;
+    text-align: center;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  footer {
+    font-weight: normal;
+  }
+
+  .tenancy {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    justify-content: center;
+    width: 100%;
+  }
+
+  #tenancyType {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+
+  .topLabel0 {
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    padding-right: 70px;
+    font-weight: normal;
+    font-family: "Montserrat";
+  }
+
+  input {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    margin-bottom: 9px;
+    background-color: aliceblue;
+    border: none;
+    box-shadow: 2px 2px 8px rgba(16, 68, 64, 0.616);
+    outline: none;
+  }
+
+  .yesNo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+
+  .option {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: normal;
+  }
+
+  .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid red; */
+    flex-direction: column;
+  }
+
+  .nextBtn {
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 200%;
+  }
+
+  .form2top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid white; */
+    align-items: center;
+    margin-top: 10px;
+    font-weight: normal;
+  }
+
+  .tenancy2 {
+    margin-top: 10px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .shortInput {
+    font-weight: normal;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
